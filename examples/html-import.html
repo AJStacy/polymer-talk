@@ -1,0 +1,26 @@
+<html>
+<head>
+  <title>HTML Import Demo</title>
+  <!-- We'll get the polyfills from the CDN for experimentation -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/1.2.0/webcomponents-lite.js"></script>
+  <!-- Let's import our page! -->
+  <link rel="import" href="myPage.html">
+</head>
+<body>
+  <!-- Define a space for our header area -->
+  <div id="pageContainer"></div>
+  <script>
+    // We need to get our HTML that we are importing.
+    var htmlLink = document.querySelector('link[rel="import"]');
+    var doc = htmlLink.import.querySelector('#myPage');
+    // Because we imported myPage.html we can target the template.
+    let myPage = document.importNode(
+      doc.content,
+      true
+    );
+    // Our last step is to add the page to our document.
+    let pageContainer = document.querySelector('#pageContainer');
+    pageContainer.appendChild(myPage);
+  </script>
+</body>
+</html>

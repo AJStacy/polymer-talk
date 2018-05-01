@@ -1,0 +1,24 @@
+<template id="myPage">
+  <!-- Define a space for our header area -->
+  <div id="headerArea"></div>
+
+  <template id="myHeader">
+    <h1>Header Goes Here</h1>
+    <h4>Subtitle Goes Here</h4>
+  </template>
+
+  <script>
+    // Let's create a clone of our template and imprt it into our document
+    let newHeader = document.importNode(
+      document.querySelector('#myHeader').content,
+      true
+    );
+    // And let's get a reference to our header area
+    let headerArea = document.querySelector('#headerArea');
+    // Now we'll modify our cloned template DOM
+    newHeader.querySelector('h1').innerText = "My New Story";
+    newHeader.querySelector('h4').innerText = "with a great subtitle";
+    // Lastly, we'll now append it to the headerArea
+    headerArea.appendChild(newHeader);
+  </script>
+</template>
