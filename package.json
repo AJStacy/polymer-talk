@@ -1,0 +1,22 @@
+{
+  "name": "polymer-talk",
+  "version": "1.0.0",
+  "description": "Code examples for my Polymer talk.",
+  "main": "index.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AJStacy/polymer-talk.git"
+  },
+  "author": "Andrew Stacy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AJStacy/polymer-talk/issues"
+  },
+  "homepage": "https://github.com/AJStacy/polymer-talk#readme"
+}
