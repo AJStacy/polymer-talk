@@ -1,0 +1,41 @@
+<link rel="import"  href="https://polygit.org/components/polymer/polymer-element.html">
+
+<dom-module id="blog-post">
+
+  <template>
+    <!-- scoped CSS for this element -->
+    <style>
+      div {
+        display: block;
+        background-color: #fff;
+        border-radius: 8px;
+        border-color: #000;
+        padding: 10px;
+      }
+    </style>
+    <div>
+      <h4>Author: [[author]]</h4>
+      <!-- any children are rendered here -->
+      <slot></slot>
+    </div>
+  </template>
+
+  <script>
+    class BlogPost extends Polymer.Element {
+      static get is() { return "blog-post"; }
+
+      constructor() {
+        super();
+      }
+
+      static get properties() {
+        return {
+          author: String
+        };
+      }
+
+    }
+    customElements.define(BlogPost.is, BlogPost);
+  </script>
+
+</dom-module>

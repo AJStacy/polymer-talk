@@ -1,0 +1,24 @@
+<html>
+<head>
+  <title>Polymer Component Demo</title>
+  <!-- We'll get the polyfills from the CDN for experimentation -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/1.2.0/webcomponents-lite.js"></script>
+  <!-- Let's import our page! -->
+  <link rel="import" href="blog-post.html">
+  <style>
+    body {
+      margin: 50px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Define a space for our header area -->
+  <div id="pageContainer">
+    <blog-post author="Andrew Stacy">
+      <p>A little about me...</p>
+      <h4>Subheader</h4>
+      <p>Hey! That's neat.</p>
+    </blog-post>
+  </div>
+</body>
+</html>
