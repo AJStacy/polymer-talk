@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/AJStacy/polymer-talk/issues"
   },
-  "homepage": "https://github.com/AJStacy/polymer-talk#readme"
+  "homepage": "https://github.com/AJStacy/polymer-talk#readme",
+  "dependencies": {
+    "marked": "^0.3.19"
+  }
 }
